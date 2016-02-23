@@ -1,0 +1,37 @@
+# REGISTERS
+00 - A  - accu
+01 - B  - accu
+02 - C  - crry
+03 - D  - cond
+04 - F  - flgs
+05 - P  - mptr
+06 - S  - stck
+07 - Z  - spcl
+08 - FF - an0n
+
+# INSTRUCTION FORMAT
+NN: OO 0000 0000 00
+MN: OO MMMM 0000 00
+MM: OO MMMM MMMM 00
+ML: OO MMMM LLLL 00
+MR: OO MMMM 0000 RR
+LN: OO LLLL 0000 00
+RN: OO 0000 0000 RR
+RM: OO MMMM 0000 RR
+RL: OO LLLL 0000 RR
+
+# INSTRUCTIONS
+NN - 00 - nop
+
+RM - 20 - R |= M
+RM - 21 - R &= M
+RM - 22 - R ^= M
+RN - 23 - R = ~R
+
+RL - 28 - R |= L
+RL - 29 - R &= L
+RL - 2A - R ^= L
+RN - 2B - R = ~R
+
+MN - 30 - JUMP M
+MN - 
